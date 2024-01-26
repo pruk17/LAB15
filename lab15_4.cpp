@@ -17,3 +17,21 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &A, int &B, int &C, int &D){
+	    int shfA = A;
+		int shfB = B;
+		int shfC = C;
+		int shfD = D;
+		int shff[] = {shfA, shfB, shfC, shfD};
+	    for (int i = 0; i < 4; i++){
+		    int P1 = rand()%4;
+			int P2 = rand()%4;
+			int swap = shff[P1];
+            shff[P1] = shff[P2];
+			shff[P2] = swap;
+		}
+
+		A = shff[0], B = shff[1], C = shff[2], D = shff[3];
+
+}
